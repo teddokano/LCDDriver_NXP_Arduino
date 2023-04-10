@@ -24,7 +24,10 @@
 class PCA8561 : public I2C_device
 {
 public:
+	/** # of LCD backplane output */
 	static const int N_COM	= 4;
+
+	/** # of LCD segment output */
 	static const int N_SEG	= 18;
 	enum reg_num {
 		Software_reset, Device_ctrl,
@@ -34,21 +37,53 @@ public:
 		COM2_17_16, COM3_07_00, COM3_15_08, COM3_17_16 
 	};
 
+	/** Create a PCA8561 instance with specified address
+	 *
+	 * @param i2c_address I2C-bus address (default: (0x70>>1))
+	 */
 	PCA8561( uint8_t i2c_address = (0x70 >> 1) );
 	virtual ~PCA8561();
 	
+	/** Begin the device operation
+	 *
+	 *	This method turns-on the device
+	 */
 	void begin( void );
+
+	/** Access to a segment
+	 *
+	 * @param com LCD backplane output select
+	 * @param seg LCD segment output select
+	 * @param v true for the segment ON
+	 */
 	void com_seg( int com, int seg, bool v );
+	
+	/** String output
+	 *
+	 * @param s A string to display
+	 * @param dly Option parameter for scroll effect each character appears with this delay [mili-second] (default: 0)
+	 */
 	void puts( const char* s, int dly = 0 );
 	
+	/** Character output
+	 *	
+	 *	Putting '\n' or '\r' character to clear display in next "putchar()" or "puts()" call
+	 *	
+	 * @param c A character to display
+	 */
 #ifdef putchar
 #undef putchar
 #endif
 	void putchar( char c );
-	void flush( void );
+
+	/** Clear display
+	 *	
+	 * @param no_flush no immidiate display clear (display will be cleared at next "putchar()" or "puts()" call)
+	 */
 	void clear( bool no_flush = false );
 
 private:
+	void	flush( void );
 	void	char2seg( int pos, int c );
 	uint8_t	bf[ 12 ];
 	char	str_buffer[ 4 ];
