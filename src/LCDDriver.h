@@ -32,7 +32,7 @@ public:
 	enum reg_num {
 		Software_reset, Device_ctrl,
 		Display_ctrl_1, Display_ctrl_2,
-		COM0_07_00, COM0_15_08, COM0_17_16,COM1_07_00, 
+		COM0_07_00, COM0_15_08, COM0_17_16, COM1_07_00, 
 		COM1_15_08, COM1_17_16, COM2_07_00, COM2_15_08, 
 		COM2_17_16, COM3_07_00, COM3_15_08, COM3_17_16 
 	};
