@@ -38,7 +38,7 @@ public:
 
 	void com_seg( int com, int seg, bool v );
 	void puts( char* s );
-	void lcdputchar( char c );
+	void putch( char c );
 	void flush( void );
 	void clear( void );
 

@@ -32,7 +32,7 @@ void PCA8561::puts( char* s )
 		putchar( c );
 }
 
-void PCA8561::lcdputchar( char c )
+void PCA8561::putch( char c )
 {
 	if (4 == str_pos) {
 		for ( int i = 0; i < (4 - 1); i++ )
@@ -52,7 +52,7 @@ void PCA8561::lcdputchar( char c )
 
 void PCA8561::flush( void )
 {
-	reg_w( COM0_07_00, bf, sizeof( bf ) );
+	reg_w( COM0_07_00, bf, 12 );
 }
 
 void PCA8561::clear( void )
@@ -67,12 +67,15 @@ void PCA8561::clear( void )
 
 void PCA8561::char2seg( int pos, int c )
 {
+	Serial.println(pos);
+	Serial.println(pos / 2 + 9);
+
 	c	= toupper( c );
 	
 	if ( (c < 32) || (92 < c) )
 		c	= 32;
 	
-	uint8_t	p	= char_pattern[ c - 32 ];
+	uint16_t	p	= char_pattern[ c - 32 ];
 		
 	uint8_t	c0	=  p        & 0x0F;
 	uint8_t	c1	= (p >>  4) & 0x0F;
