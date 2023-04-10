@@ -56,7 +56,7 @@ PCA8561_lib_test		|PCA8561	|Test code for **all library features**
 
 # Document
 
-For details of the library, please find descriptions in [this document](https://teddokano.github.io/RTC_NXP_Arduino/annotated.html).
+For details of the library, please find descriptions in [this document](https://teddokano.github.io/LCDDriver_NXP_Arduino/annotated.html).
 
 
 
