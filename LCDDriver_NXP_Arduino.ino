@@ -1,5 +1,13 @@
 /** PCA8561 operation sample
- *  
+ *
+ *  Code for test features of this library. 
+ *
+ *  @author  Tedd OKANO
+ *
+ *  Released under the MIT license License
+ *
+ *  About PCA8561:
+ *    https://www.nxp.com/products/peripherals-and-logic/lcd-drivers/lcd-segment-drivers/automotive-18-x-4-lcd-segment-driver:PCA8561
  */
 
 
@@ -7,16 +15,13 @@
 
 PCA8561 lcdd;
 
-
 void setup() {
   Serial.begin(9600);
   Serial.println("\r***** Hello, PCA8561! *****");
 
   Wire.begin();
-
-  lcdd.begin();
+  lcdd.begin();  // This is necessary to enable display; device goes into power-on mode
 }
-
 
 void loop() {
   test_putchar();
@@ -66,20 +71,15 @@ void test_COM_SEG_access(void) {
 }
 
 void test_register_access(void) {
-  uint8_t fill[12];
-  for (int i = 0; i < sizeof(fill); i++) fill[i] = 0xff;
-  uint8_t blank[12] = { 0x00 };
+  const int size = 12;
+  uint8_t test_bf[2][size];
 
-  lcdd.reg_w(PCA8561::COM0_07_00, fill, sizeof(fill));
-  delay(200);
-  lcdd.reg_w(PCA8561::COM0_07_00, blank, sizeof(blank));
-  delay(200);
-  lcdd.reg_w(PCA8561::COM0_07_00, fill, sizeof(fill));
-  delay(200);
-  lcdd.reg_w(PCA8561::COM0_07_00, blank, sizeof(blank));
-  delay(200);
-  lcdd.reg_w(PCA8561::COM0_07_00, fill, sizeof(fill));
-  delay(200);
-  lcdd.reg_w(PCA8561::COM0_07_00, blank, sizeof(blank));
-  delay(200);
+  for (int i = 0; i < 2; i++)
+    for (int j = 0; j < size; j++)
+      test_bf[i][j] = (i) ? 0xFF : 0x00;
+
+  for (int i = 0; i < 6; i++) {
+    lcdd.reg_w(PCA8561::COM0_07_00, test_bf[i % 2], size);
+    delay(200);
+  }
 }

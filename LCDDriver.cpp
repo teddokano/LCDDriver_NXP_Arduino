@@ -82,9 +82,6 @@ void PCA8561::clear( bool no_flush )
 
 void PCA8561::char2seg( int pos, int c )
 {
-	Serial.println(pos);
-	Serial.println(pos / 2 + 9);
-
 	c	= toupper( c );
 	
 	if ( (c < 32) || (92 < c) )
