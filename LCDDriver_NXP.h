@@ -48,7 +48,6 @@ private:
 	char	str_buffer[ 4 ];
 	int		str_pos	= 0;
 	static uint16_t char_pattern[61];
-	
 };
 
 #endif //	ARDUINO_LCD_DRIVER_H

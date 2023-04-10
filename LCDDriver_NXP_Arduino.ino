@@ -25,4 +25,32 @@ void loop() {
   Serial.println("A");
   lcdd.lcdputchar('A');
   delay(200);
+  lcdd.lcdputchar('B');
+  delay(200);
+  lcdd.lcdputchar('C');
+  delay(200);
+  lcdd.lcdputchar('D');
+  delay(200);
+  lcdd.lcdputchar('E');
+  delay(200);
+  lcdd.lcdputchar('F');
+  delay(200);
+  lcdd.lcdputchar('G');
+  delay(200);
+
+  uint8_t black[12] = { 0xFF };
+  uint8_t white[12] = { 0x00 };
+
+  lcdd.reg_w(PCA8561::COM0_07_00, black, sizeof(black));
+  delay(200);
+  lcdd.reg_w(PCA8561::COM0_07_00, white, sizeof(white));
+  delay(200);
+  lcdd.reg_w(PCA8561::COM0_07_00, black, sizeof(black));
+  delay(200);
+  lcdd.reg_w(PCA8561::COM0_07_00, white, sizeof(white));
+  delay(200);
+  lcdd.reg_w(PCA8561::COM0_07_00, black, sizeof(black));
+  delay(200);
+  lcdd.reg_w(PCA8561::COM0_07_00, white, sizeof(white));
+  delay(200);
 }
