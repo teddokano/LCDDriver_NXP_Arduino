@@ -25,6 +25,14 @@ void setup() {
 void loop() {
   static const char* str = "    ABDCEFGHIJKLMNOPQRSTUVWXYZ 0123456789    ";
 
+  lcdd.puts("AA\n");
+    delay(500);
+  lcdd.puts("BB\n");
+  delay(500);
+  lcdd.puts("CC\n");
+    delay(500);
+
+#if 0
   lcdd.puts(str, 100);
 
 
@@ -71,4 +79,5 @@ void loop() {
   delay(200);
   lcdd.reg_w(PCA8561::COM0_07_00, white, sizeof(white));
   delay(200);
+#endif
 }

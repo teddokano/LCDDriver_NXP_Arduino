@@ -44,7 +44,7 @@ public:
 #endif
 	void putchar( char c );
 	void flush( void );
-	void clear( void );
+	void clear( bool no_flush = false );
 
 private:
 	void	char2seg( int pos, int c );

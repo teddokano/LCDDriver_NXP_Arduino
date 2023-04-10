@@ -36,6 +36,11 @@ void PCA8561::puts( char* s, int dly )
 
 void PCA8561::putchar( char c )
 {
+	if ( ('\n' == c) || ('\r' == c)) {
+		clear( true );
+		return;
+	}
+
 	if (4 == str_pos) {
 		for ( int i = 0; i < (4 - 1); i++ )
 			str_buffer[ i ]	= str_buffer[ i + 1 ];
@@ -57,14 +62,15 @@ void PCA8561::flush( void )
 	reg_w( COM0_07_00, bf, 12 );
 }
 
-void PCA8561::clear( void )
+void PCA8561::clear( bool no_flush )
 {
 	for ( int i = 0; i < 12; i++ )
 		bf[ i ]	= 0x00;	
 	
 	str_pos	= 0;
 	
-	flush();
+	if ( !no_flush )
+		flush();
 }
 
 void PCA8561::char2seg( int pos, int c )
