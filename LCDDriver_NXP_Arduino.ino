@@ -3,9 +3,10 @@
  */
 
 
-#include "LCDDriver_NXP.h"
+#include "LCDDriver.h"
 
 PCA8561 lcdd;
+
 
 void setup() {
   Serial.begin(9600);
@@ -20,10 +21,13 @@ void setup() {
   lcdd.reg_w(PCA8561::COM0_07_00, white, sizeof(white));
 }
 
-void loop() {
 
-#if 1
-  Serial.println("A");
+void loop() {
+  static const char* str = "    ABDCEFGHIJKLMNOPQRSTUVWXYZ 0123456789    ";
+
+  lcdd.puts(str, 100);
+
+
   lcdd.putchar('A');
   delay(200);
   lcdd.putchar('B');
@@ -38,8 +42,21 @@ void loop() {
   delay(200);
   lcdd.putchar('G');
   delay(200);
-#endif
-  uint8_t black[12] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, };
+
+  uint8_t black[12] = {
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+    0xFF,
+  };
   uint8_t white[12] = { 0x00 };
 
   lcdd.reg_w(PCA8561::COM0_07_00, black, sizeof(black));

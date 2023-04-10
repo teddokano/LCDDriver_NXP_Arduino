@@ -37,7 +37,7 @@ public:
 	virtual ~PCA8561();
 
 	void com_seg( int com, int seg, bool v );
-	void puts( char* s );
+	void puts( char* s, int dly = 0 );
 	
 #ifdef putchar
 #undef putchar

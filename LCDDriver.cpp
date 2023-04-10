@@ -1,4 +1,4 @@
-#include "LCDDriver_NXP.h"
+#include "LCDDriver.h"
 
 /* PCA8561 class ******************************************/
 
@@ -26,10 +26,12 @@ void PCA8561::com_seg( int com, int seg, bool v )
 	bit_op8( reg[ com][ seg / 8 ], (uint8_t)(~(1 << (seg % 8))), v << (seg % 8) );
 }
 
-void PCA8561::puts( char* s )
+void PCA8561::puts( char* s, int dly )
 {
-	while ( int c = *s++ )
+	while ( int c = *s++ ) {
 		putchar( c );
+		delay( dly );
+	}
 }
 
 void PCA8561::putchar( char c )
