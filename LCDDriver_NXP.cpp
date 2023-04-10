@@ -32,7 +32,7 @@ void PCA8561::puts( char* s )
 		putchar( c );
 }
 
-void PCA8561::putch( char c )
+void PCA8561::putchar( char c )
 {
 	if (4 == str_pos) {
 		for ( int i = 0; i < (4 - 1); i++ )

@@ -38,7 +38,11 @@ public:
 
 	void com_seg( int com, int seg, bool v );
 	void puts( char* s );
-	void putch( char c );
+	
+#ifdef putchar
+#undef putchar
+#endif
+	void putchar( char c );
 	void flush( void );
 	void clear( void );
 

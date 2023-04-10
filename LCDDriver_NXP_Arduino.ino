@@ -24,19 +24,19 @@ void loop() {
 
 #if 1
   Serial.println("A");
-  lcdd.putch('A');
+  lcdd.putchar('A');
   delay(200);
-  lcdd.putch('B');
+  lcdd.putchar('B');
   delay(200);
-  lcdd.putch('C');
+  lcdd.putchar('C');
   delay(200);
-  lcdd.putch('D');
+  lcdd.putchar('D');
   delay(200);
-  lcdd.putch('E');
+  lcdd.putchar('E');
   delay(200);
-  lcdd.putch('F');
+  lcdd.putchar('F');
   delay(200);
-  lcdd.putch('G');
+  lcdd.putchar('G');
   delay(200);
 #endif
   uint8_t black[12] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, };
