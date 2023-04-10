@@ -1,6 +1,5 @@
-/** TempSensor operation library for Arduino
+/** LCDDriver operation library for Arduino
  *
- *  @class  TempSensor
  *  @author Tedd OKANO
  *
  *  Released under the MIT license License
@@ -14,17 +13,19 @@
 
 #include "I2C_device.h"
 
-/** TempSensor class
+/** PCA8561 class
  *	
- *  @class TempSensor
+ *  @class PCA8561
  *
- *	TempSensor class is a base class for all temperature sensors
- *	All actual device class will be inherited from this class
+ *	PCA8561 class is a sample code for the PCA8561AHN-ARD
+ *	It demonstrates LCD operation by 
  */
 
 class PCA8561 : public I2C_device
 {
 public:
+	static const int N_COM	= 4;
+	static const int N_SEG	= 18;
 	enum reg_num {
 		Software_reset, Device_ctrl,
 		Display_ctrl_1, Display_ctrl_2,
@@ -35,9 +36,10 @@ public:
 
 	PCA8561( uint8_t i2c_address = (0x70 >> 1) );
 	virtual ~PCA8561();
-
+	
+	void begin( void );
 	void com_seg( int com, int seg, bool v );
-	void puts( char* s, int dly = 0 );
+	void puts( const char* s, int dly = 0 );
 	
 #ifdef putchar
 #undef putchar

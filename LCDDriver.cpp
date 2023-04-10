@@ -8,10 +8,17 @@ PCA8561::PCA8561( uint8_t i2c_address ) : I2C_device( i2c_address )
 		bf[ i ]	= 0x00;	
 	
 	str_pos	= 0;
+	
+//	reg_w(PCA8561::Display_ctrl_1, 0x01);
 }
 
 PCA8561::~PCA8561()
 {
+}
+
+void PCA8561::begin( void )
+{
+	reg_w(PCA8561::Display_ctrl_1, 0x01);
 }
 
 void PCA8561::com_seg( int com, int seg, bool v )
@@ -26,7 +33,7 @@ void PCA8561::com_seg( int com, int seg, bool v )
 	bit_op8( reg[ com][ seg / 8 ], (uint8_t)(~(1 << (seg % 8))), v << (seg % 8) );
 }
 
-void PCA8561::puts( char* s, int dly )
+void PCA8561::puts( const char* s, int dly )
 {
 	while ( int c = *s++ ) {
 		putchar( c );
