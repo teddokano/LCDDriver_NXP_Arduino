@@ -9,7 +9,7 @@ _PCA8561AHN-ARD : Arduino® Shield Evaluation Board for LCD driver_
 
 ## What is this?
 An Arduino library for I²C LCD driver with sample code.  
-This library provides siple API to display characters on the LCD. 
+This library provides simple API to display characters on the LCD. 
 
 With `LCDDriver_NXP_Arduino` library, characters can be shown by next sample code. 
 ```cpp
@@ -21,7 +21,7 @@ void setup() {
   Wire.begin();
   lcdd.begin();  // This is necessary to enable display; device goes into power-on mode
 
-  lcdd.puts("TEST");
+  lcdd.puts("BEER");
 }
 
 void loop() {
