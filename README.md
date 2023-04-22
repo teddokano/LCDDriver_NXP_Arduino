@@ -9,7 +9,8 @@ _PCA8561AHN-ARD : Arduino® Shield Evaluation Board for LCD driver_
 
 ## What is this?
 An Arduino library for I²C LCD driver with sample code.  
-This library provides simple API to display characters on the LCD. 
+This library provides simple API to display characters on the LCD.  
+Include device name header file (`PCA8561.h`) to use those class libraries. 
 
 With `LCDDriver_NXP_Arduino` library, characters can be shown by next sample code. 
 ```cpp
@@ -29,9 +30,9 @@ void loop() {
 ```
 
 ## Supported device
-Type#|Features|Interface|Evaluation board
----|---|---|---
-[PCA8561](https://www.nxp.com/products/peripherals-and-logic/lcd-drivers/lcd-segment-drivers/automotive-18-x-4-lcd-segment-driver:PCA8561)	|18 X 4 LCD Segment Driver	|I²C Fast-mode (400KHz)			|[PCA8561 18 × 4 LCD Segment Driver Arduino® Shield](https://www.nxp.com/design/development-boards/analog-toolbox/arduino-shields-solutions/pca8561-18-4-lcd-segment-driver-arduino-shield:PCA8561AHN-ARD)
+Type#|Header file|Features|Interface|Evaluation board
+---|---|---|---|---
+[PCA8561](https://www.nxp.com/products/peripherals-and-logic/lcd-drivers/lcd-segment-drivers/automotive-18-x-4-lcd-segment-driver:PCA8561)	|`PCA8561.h`	|18 X 4 LCD Segment Driver	|I²C Fast-mode (400KHz)			|[PCA8561 18 × 4 LCD Segment Driver Arduino® Shield](https://www.nxp.com/design/development-boards/analog-toolbox/arduino-shields-solutions/pca8561-18-4-lcd-segment-driver-arduino-shield:PCA8561AHN-ARD)
 
 # Getting started
 
