@@ -14,7 +14,7 @@ Include device name header file (`PCA8561.h`) to use those class libraries.
 
 With `LCDDriver_NXP_Arduino` library, characters can be shown by next sample code. 
 ```cpp
-#include <LCDDriver.h>
+#include <PCA8561.h>
 
 PCA8561 lcdd;
 
