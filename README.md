@@ -55,6 +55,27 @@ PCA8561_simple			|PCA8561	|**Simple** sample for just showing "TEST" on LCD
 PCA8561_string_scroll	|PCA8561	|Shows **string scrolling** feature
 PCA8561_lib_test		|PCA8561	|Test code for **all library features**
 
+### TIPS
+If you need to use different I²C bus on Arduino, it can be done like this. This sample shows how the `Wire1` on Arduino Due can be operated.  
+```cpp
+#include <PCA8561.h>
+
+// PCA8561 lcdd; // This line was changed to below
+PCA8561 lcdd(Wire1);
+
+void setup() {
+  // Wire.begin(); // This line was changed to below
+  Wire1.begin();
+  lcdd.begin();  // This is necessary to enable display; device goes into power-on mode
+
+  lcdd.puts("BEER");
+}
+
+void loop() {
+}
+```
+
+
 # Document
 
 For details of the library, please find descriptions in [this document](https://teddokano.github.io/LCDDriver_NXP_Arduino/annotated.html).

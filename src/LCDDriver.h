@@ -42,6 +42,13 @@ public:
 	 * @param i2c_address I2C-bus address (default: (0x70>>1))
 	 */
 	PCA8561( uint8_t i2c_address = (0x70 >> 1) );
+
+	/** Create a PCA8561 instance with specified address
+	 *
+	 * @param wire TwoWire instance
+	 * @param i2c_address I2C-bus address (default: (0x70>>1))
+	 */
+	PCA8561( TwoWire& wire, uint8_t i2c_address = (0x70 >> 1) );
 	virtual ~PCA8561();
 	
 	/** Begin the device operation
@@ -83,6 +90,7 @@ public:
 	void clear( bool no_flush = false );
 
 private:
+	void	init( void );
 	void	flush( void );
 	void	char2seg( int pos, int c );
 	uint8_t	bf[ 12 ];

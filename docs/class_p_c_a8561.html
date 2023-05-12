@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LCDDriver_NXP_Arduino<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">LCDDriver_NXP_Arduino<span id="projectnumber">&#160;0.3.0</span>
    </div>
    <div id="projectbrief">Temperature sensor device operation sample code for Arduino</div>
   </td>
@@ -120,6 +120,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a78363786deda823344fa3cc42dfb17b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#a78363786deda823344fa3cc42dfb17b0">PCA8561</a> (uint8_t i2c_address=(0x70 &gt; &gt; 1))</td></tr>
 <tr class="separator:a78363786deda823344fa3cc42dfb17b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476bdee828db579c707b78d963f2c89c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#a476bdee828db579c707b78d963f2c89c">PCA8561</a> (TwoWire &amp;wire, uint8_t i2c_address=(0x70 &gt; &gt; 1))</td></tr>
+<tr class="separator:a476bdee828db579c707b78d963f2c89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf1d992f6ce191ae5b7264d5d24506fd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#acf1d992f6ce191ae5b7264d5d24506fd">~PCA8561</a> ()</td></tr>
 <tr class="separator:acf1d992f6ce191ae5b7264d5d24506fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acafe1da108b5bd6b3942ec0bec2cff33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#acafe1da108b5bd6b3942ec0bec2cff33">begin</a> (void)</td></tr>
@@ -142,6 +144,8 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a6038225627e3ce67e80f515e6b0023ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#a6038225627e3ce67e80f515e6b0023ba">init</a> (void)</td></tr>
+<tr class="separator:a6038225627e3ce67e80f515e6b0023ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59832cfeeadf5144e9d98c81eb94f0a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#a59832cfeeadf5144e9d98c81eb94f0a8">flush</a> (void)</td></tr>
 <tr class="separator:a59832cfeeadf5144e9d98c81eb94f0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80d64e68820f51ad8b798c9d53b4e5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a8561.html#a80d64e68820f51ad8b798c9d53b4e5ba">char2seg</a> (int pos, int c)</td></tr>
@@ -205,7 +209,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a78363786deda823344fa3cc42dfb17b0" name="a78363786deda823344fa3cc42dfb17b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78363786deda823344fa3cc42dfb17b0">&#9670;&#160;</a></span>PCA8561()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a78363786deda823344fa3cc42dfb17b0">&#9670;&#160;</a></span>PCA8561() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,6 +232,44 @@ Static Private Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00005">5</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a476bdee828db579c707b78d963f2c89c" name="a476bdee828db579c707b78d963f2c89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476bdee828db579c707b78d963f2c89c">&#9670;&#160;</a></span>PCA8561() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PCA8561::PCA8561 </td>
+          <td>(</td>
+          <td class="paramtype">TwoWire &amp;&#160;</td>
+          <td class="paramname"><em>wire</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>i2c_address</em> = <code>(0x70&#160;&gt;&gt;&#160;1)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a <a class="el" href="class_p_c_a8561.html">PCA8561</a> instance with specified address</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wire</td><td>TwoWire instance </td></tr>
+    <tr><td class="paramname">i2c_address</td><td>I2C-bus address (default: (0x70&gt;&gt;1)) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00010">10</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
 </div>
 </div>
@@ -254,7 +296,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00015">15</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00025">25</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
 </div>
 </div>
@@ -277,7 +319,7 @@ Static Private Attributes</h2></td></tr>
 <p>Begin the device operation</p>
 <p>This method turns-on the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00019">19</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00029">29</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
 </div>
 </div>
@@ -315,9 +357,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00083">83</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00093">93</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00044">putchar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00054">putchar()</a>.</p>
 
 </div>
 </div>
@@ -344,9 +386,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00072">72</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00082">82</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00044">putchar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00054">putchar()</a>.</p>
 
 </div>
 </div>
@@ -391,7 +433,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00024">24</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00034">34</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,9 +461,39 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00067">67</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00077">77</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00072">clear()</a>, and <a class="el" href="_l_c_d_driver_8cpp_source.html#l00044">putchar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00082">clear()</a>, and <a class="el" href="_l_c_d_driver_8cpp_source.html#l00054">putchar()</a>.</p>
+
+</div>
+</div>
+<a id="a6038225627e3ce67e80f515e6b0023ba" name="a6038225627e3ce67e80f515e6b0023ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6038225627e3ce67e80f515e6b0023ba">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PCA8561::init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00015">15</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00005">PCA8561()</a>.</p>
 
 </div>
 </div>
@@ -450,9 +522,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00044">44</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00054">54</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00036">puts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00046">puts()</a>.</p>
 
 </div>
 </div>
@@ -490,7 +562,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00036">36</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8cpp_source.html#l00046">46</a> of file <a class="el" href="_l_c_d_driver_8cpp_source.html">LCDDriver.cpp</a>.</p>
 
 </div>
 </div>
@@ -515,9 +587,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00088">88</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00096">96</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00083">char2seg()</a>, <a class="el" href="_l_c_d_driver_8cpp_source.html#l00072">clear()</a>, <a class="el" href="_l_c_d_driver_8cpp_source.html#l00067">flush()</a>, and <a class="el" href="_l_c_d_driver_8cpp_source.html#l00005">PCA8561()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00093">char2seg()</a>, <a class="el" href="_l_c_d_driver_8cpp_source.html#l00082">clear()</a>, <a class="el" href="_l_c_d_driver_8cpp_source.html#l00077">flush()</a>, and <a class="el" href="_l_c_d_driver_8cpp_source.html#l00015">init()</a>.</p>
 
 </div>
 </div>
@@ -551,9 +623,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line">    0x2828, 0x8028, 0x1824, 0x0000, 0x2008, </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00091">91</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00099">99</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00083">char2seg()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00093">char2seg()</a>.</p>
 
 </div>
 </div>
@@ -627,9 +699,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00089">89</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00097">97</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00044">putchar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00054">putchar()</a>.</p>
 
 </div>
 </div>
@@ -653,9 +725,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00090">90</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_l_c_d_driver_8h_source.html#l00098">98</a> of file <a class="el" href="_l_c_d_driver_8h_source.html">LCDDriver.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00072">clear()</a>, <a class="el" href="_l_c_d_driver_8cpp_source.html#l00005">PCA8561()</a>, and <a class="el" href="_l_c_d_driver_8cpp_source.html#l00044">putchar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_l_c_d_driver_8cpp_source.html#l00082">clear()</a>, <a class="el" href="_l_c_d_driver_8cpp_source.html#l00015">init()</a>, and <a class="el" href="_l_c_d_driver_8cpp_source.html#l00054">putchar()</a>.</p>
 
 </div>
 </div>

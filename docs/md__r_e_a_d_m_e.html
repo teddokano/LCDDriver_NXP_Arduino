@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LCDDriver_NXP_Arduino<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">LCDDriver_NXP_Arduino<span id="projectnumber">&#160;0.3.0</span>
    </div>
    <div id="projectbrief">Temperature sensor device operation sample code for Arduino</div>
   </td>
@@ -85,7 +85,7 @@ What is this?</h1>
 <p>An Arduino library for I²C LCD driver with sample code. <br  />
  This library provides simple API to display characters on the LCD. <br  />
  Include device name header file (<code><a class="el" href="_p_c_a8561_8h.html">PCA8561.h</a></code>) to use those class libraries.</p>
-<p>With <code>LCDDriver_NXP_Arduino</code> library, characters can be shown by next sample code. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_l_c_d_driver_8h.html">LCDDriver.h</a>&gt;</span></div>
+<p>With <code>LCDDriver_NXP_Arduino</code> library, characters can be shown by next sample code. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_p_c_a8561_8h.html">PCA8561.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="class_p_c_a8561.html">PCA8561</a> lcdd;</div>
 <div class="line"> </div>
@@ -98,10 +98,10 @@ What is this?</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
 <div class="line">}</div>
-<div class="ttc" id="a_l_c_d_driver_8h_html"><div class="ttname"><a href="_l_c_d_driver_8h.html">LCDDriver.h</a></div></div>
+<div class="ttc" id="a_p_c_a8561_8h_html"><div class="ttname"><a href="_p_c_a8561_8h.html">PCA8561.h</a></div></div>
 <div class="ttc" id="aclass_p_c_a8561_html"><div class="ttname"><a href="class_p_c_a8561.html">PCA8561</a></div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_driver_8h_source.html#l00024">LCDDriver.h:25</a></div></div>
-<div class="ttc" id="aclass_p_c_a8561_html_a44e96f713c9fbf091832d66e7b525560"><div class="ttname"><a href="class_p_c_a8561.html#a44e96f713c9fbf091832d66e7b525560">PCA8561::puts</a></div><div class="ttdeci">void puts(const char *s, int dly=0)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_driver_8cpp_source.html#l00036">LCDDriver.cpp:36</a></div></div>
-<div class="ttc" id="aclass_p_c_a8561_html_acafe1da108b5bd6b3942ec0bec2cff33"><div class="ttname"><a href="class_p_c_a8561.html#acafe1da108b5bd6b3942ec0bec2cff33">PCA8561::begin</a></div><div class="ttdeci">void begin(void)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_driver_8cpp_source.html#l00019">LCDDriver.cpp:19</a></div></div>
+<div class="ttc" id="aclass_p_c_a8561_html_a44e96f713c9fbf091832d66e7b525560"><div class="ttname"><a href="class_p_c_a8561.html#a44e96f713c9fbf091832d66e7b525560">PCA8561::puts</a></div><div class="ttdeci">void puts(const char *s, int dly=0)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_driver_8cpp_source.html#l00046">LCDDriver.cpp:46</a></div></div>
+<div class="ttc" id="aclass_p_c_a8561_html_acafe1da108b5bd6b3942ec0bec2cff33"><div class="ttname"><a href="class_p_c_a8561.html#acafe1da108b5bd6b3942ec0bec2cff33">PCA8561::begin</a></div><div class="ttdeci">void begin(void)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_driver_8cpp_source.html#l00029">LCDDriver.cpp:29</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 Supported device</h1>
 <table class="markdownTable">
@@ -142,11 +142,15 @@ Related libraries</h2>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Library   </th><th class="markdownTableHeadNone">Feature   </th><th class="markdownTableHeadNone">Target devices   </th><th class="markdownTableHeadNone">Required library    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/GPIO_NXP_Arduino">GPIO_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">LED driver libraries   </td><td class="markdownTableBodyNone">PCAL6408A, PCAL6416A, PCAL6524, PCAL6534   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
+<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/GPIO_NXP_Arduino">GPIO_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">GPIO libraries   </td><td class="markdownTableBodyNone">PCAL6408A, PCAL6416A, PCAL6524, PCAL6534, PCA9555, PCA9554   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/LEDDriver_NXP_Arduino">LEDDriver_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">LED driver libraries   </td><td class="markdownTableBodyNone">PCA9955B, PCA9956B, PCA9957   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
+<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/LCDDriver_NXP_Arduino">LCDDriver_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">LCD driver libraries   </td><td class="markdownTableBodyNone"><a class="el" href="class_p_c_a8561.html">PCA8561</a>   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/RTC_NXP_Arduino">RTC_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">RTC driver libraries   </td><td class="markdownTableBodyNone">PCF2131, PCF85063A   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
+<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/LEDDriver_NXP_Arduino">LEDDriver_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">LED driver libraries   </td><td class="markdownTableBodyNone">PCA9955B, PCA9956B, PCA9957   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/MUX_SW_NXP_Arduino">MUX_SW_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">I²C mux/switch libraries   </td><td class="markdownTableBodyNone">PCA9846   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://github.com/teddokano/RTC_NXP_Arduino">RTC_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">RTC libraries   </td><td class="markdownTableBodyNone">PCF2131, PCF85063A   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="https://github.com/teddokano/TempSensor_NXP_Arduino">TempSensor_NXP_Arduino</a>   </td><td class="markdownTableBodyNone">Temperature sensor libraries   </td><td class="markdownTableBodyNone">LM75B, PCT2075, P3T1085   </td><td class="markdownTableBodyNone"><a href="https://github.com/teddokano/I2C_device_Arduino">I2C_device_Arduino</a>    </td></tr>
 <tr class="markdownTableRowOdd">

@@ -4,12 +4,22 @@
 
 PCA8561::PCA8561( uint8_t i2c_address ) : I2C_device( i2c_address )
 {
+	init();
+}
+
+PCA8561::PCA8561( TwoWire& wire, uint8_t i2c_address ) : I2C_device( wire, i2c_address )
+{
+	init();
+}
+
+void PCA8561::init( void )
+{
 	for ( int i = 0; i < 12; i++ )
 		bf[ i ]	= 0x00;	
 	
 	str_pos	= 0;
 	
-//	reg_w(PCA8561::Display_ctrl_1, 0x01);
+//	reg_w(PCA8561::Display_ctrl_1, 0x01);	
 }
 
 PCA8561::~PCA8561()
