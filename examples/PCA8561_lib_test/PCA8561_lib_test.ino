@@ -17,10 +17,13 @@ PCA8561 lcdd;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("\r***** Hello, PCA8561! *****");
+  while (!Serial)
+    ;
 
   Wire.begin();
   lcdd.begin();  // This is necessary to enable display; device goes into power-on mode
+
+  Serial.println("\r***** Hello, PCA8561! *****");
 }
 
 void loop() {

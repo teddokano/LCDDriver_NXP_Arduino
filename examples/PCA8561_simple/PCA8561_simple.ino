@@ -9,8 +9,7 @@
  *  About PCA8561:
  *    https://www.nxp.com/products/peripherals-and-logic/lcd-drivers/lcd-segment-drivers/automotive-18-x-4-lcd-segment-driver:PCA8561
  */
-
-
+ 
 #include <PCA8561.h>
 
 PCA8561 lcdd;
