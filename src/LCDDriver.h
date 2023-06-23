@@ -89,6 +89,73 @@ public:
 	 */
 	void clear( bool no_flush = false );
 
+#if DOXYGEN_ONLY
+	/** Ping the device
+	 *
+	 * @return true when ACK 
+	 */
+	bool ping( void );
+		
+	/** Multiple register write
+	 * 
+	 * @param reg register index/address/pointer
+	 * @param data pointer to data buffer
+	 * @param size data size
+	 * @return transferred data size
+	 */
+	int reg_w( uint8_t reg_adr, uint8_t *data, uint16_t size );
+
+	/** Single register write
+	 * 
+	 * @param reg register index/address/pointer
+	 * @param data pointer to data buffer
+	 * @param size data size
+	 * @return transferred data size
+	 */
+	int reg_w( uint8_t reg_adr, uint8_t data );
+
+	/** Multiple register read
+	 * 
+	 * @param reg register index/address/pointer
+	 * @param data pointer to data buffer
+	 * @param size data size
+	 * @return transferred data size
+	 */
+	int reg_r( uint8_t reg_adr, uint8_t *data, uint16_t size );
+
+	/** Single register read
+	 * 
+	 * @param reg register index/address/pointer
+	 * @return read data
+	 */
+	uint8_t	reg_r( uint8_t reg_adr );
+
+	/** Register write, 8 bit
+	 *
+	 * @param reg register index/address/pointer
+	 * @param val data value
+	 */
+	void write_r8( uint8_t reg, uint8_t val );
+
+	/** Register read, 8 bit
+	 *
+	 * @param reg register index/address/pointer
+	 * @return data value
+	 */
+	uint8_t read_r8( uint8_t reg );
+
+	/** Register overwriting with bit-mask
+	 *	
+	 *	Register can be updated by bit level
+	 *
+	 * @param reg register index/address/pointer
+	 * @param mask bit-mask to protect overwriting
+	 * @param value value to overwrite
+	 */
+	void bit_op8(  uint8_t reg,  uint8_t mask,  uint8_t value );
+	void bit_op16( uint8_t reg, uint16_t mask, uint16_t value );
+#endif	//	DOXYGEN_ONLY
+
 private:
 	void	init( void );
 	void	flush( void );
