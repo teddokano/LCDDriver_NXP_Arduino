@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../namespacecharacter__pattern.html#a0086c498ba34fd4dba4196471507a097',1,'character_pattern']]]
+  ['how_20to_20use_0',['How to use?',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
 ];

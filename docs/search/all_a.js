@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['software_5freset_0',['Software_reset',['../class_p_c_a8561.html#a1f1e6911093f3dc92a7cb0b45d5355b2ae5132e9138f4f5dcbce7fd9fc0375600',1,'PCA8561']]],
-  ['str_5fbuffer_1',['str_buffer',['../class_p_c_a8561.html#acd10dfccbda2f4dce117ddd2cec9dcd0',1,'PCA8561']]],
-  ['str_5fpos_2',['str_pos',['../class_p_c_a8561.html#ad95c7d37957644adb5f846b524874e37',1,'PCA8561']]]
+  ['n_5fcom_0',['N_COM',['../class_p_c_a8561.html#aadca0ef78e40f9455ca604caba770169',1,'PCA8561']]],
+  ['n_5fseg_1',['N_SEG',['../class_p_c_a8561.html#a87fd79041180ee2e971daffdbd68e51f',1,'PCA8561']]]
 ];

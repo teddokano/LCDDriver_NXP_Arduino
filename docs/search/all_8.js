@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['pca8561_0',['PCA8561',['../class_p_c_a8561.html',1,'PCA8561'],['../class_p_c_a8561.html#a78363786deda823344fa3cc42dfb17b0',1,'PCA8561::PCA8561(uint8_t i2c_address=(0x70 &gt; &gt; 1))'],['../class_p_c_a8561.html#a476bdee828db579c707b78d963f2c89c',1,'PCA8561::PCA8561(TwoWire &amp;wire, uint8_t i2c_address=(0x70 &gt; &gt; 1))']]],
-  ['pca8561_2eh_1',['PCA8561.h',['../_p_c_a8561_8h.html',1,'']]],
-  ['ping_2',['ping',['../class_p_c_a8561.html#a3337b9210ba915c0da3a8aa9d701b23d',1,'PCA8561']]],
-  ['putchar_3',['putchar',['../class_p_c_a8561.html#a211ac47e4245e24964ed617c0eb94c66',1,'PCA8561']]],
-  ['puts_4',['puts',['../class_p_c_a8561.html#a44e96f713c9fbf091832d66e7b525560',1,'PCA8561']]]
+  ['lcddriver_2ecpp_0',['LCDDriver.cpp',['../_l_c_d_driver_8cpp.html',1,'']]],
+  ['lcddriver_2eh_1',['LCDDriver.h',['../_l_c_d_driver_8h.html',1,'']]],
+  ['lcddriver_5fnxp_5farduino_2',['LCDDriver_NXP_Arduino',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['libraries_3',['Related libraries',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]],
+  ['list_20of_20sample_20code_4',['List of sample code',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]]
 ];

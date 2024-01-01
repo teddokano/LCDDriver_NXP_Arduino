@@ -103,7 +103,7 @@ public:
 	 * @param size data size
 	 * @return transferred data size
 	 */
-	int reg_w( uint8_t reg_adr, uint8_t *data, uint16_t size );
+	int reg_w( uint8_t reg_adr, const uint8_t *data, uint16_t size );
 
 	/** Single register write
 	 * 

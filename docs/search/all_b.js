@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_5fr8_0',['write_r8',['../class_p_c_a8561.html#a79105e51c57ea3f05cd049e51d29355f',1,'PCA8561']]]
+  ['of_20sample_20code_0',['List of sample code',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]]
 ];
