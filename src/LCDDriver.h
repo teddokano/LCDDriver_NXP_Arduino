@@ -25,10 +25,10 @@ class PCA8561 : public I2C_device
 {
 public:
 	/** The number of LCD backplane output */
-	static const int N_COM	= 4;
+	static constexpr int N_COM	= 4;
 
 	/** The number of LCD segment output */
-	static const int N_SEG	= 18;
+	static constexpr int N_SEG	= 18;
 	enum reg_num {
 		Software_reset, Device_ctrl,
 		Display_ctrl_1, Display_ctrl_2,
